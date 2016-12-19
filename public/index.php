@@ -22,9 +22,11 @@ function scanForReleases($releaseFolder) {
       </ul>
     </nav>
 
-    <?php foreach (scanForReleases('./release') as $folder): ?>
-      <a class="release" href="<?=$folder?>/"><?=$folder?></a>
-    <?php endforeach; ?>
+    <div class="releases">
+      <?php foreach (scanForReleases('./release') as $folder): ?>
+        <a class="release" href="release/<?=$folder?>/"><?=$folder?></a>
+      <?php endforeach; ?>
+    </div>
   </body>
 </html>
 
