@@ -11,7 +11,7 @@ function scanForReleases($releaseFolder) {
   </head>
 
   <body>
-    <nav class="navbar navbar-dark bg-inverse fg-white">
+    <nav class="navbar navbar-dark bg-inverse">
       <div class="container">
         <a class="navbar-brand" href="http://footworkjs.com"><img src="/images/footwork-logo.png" /></a>
         <span class="navbar-text saying">A solid footing for web applications.</span>
@@ -19,11 +19,21 @@ function scanForReleases($releaseFolder) {
     </nav>
 
     <main class="container">
-      <p>Below is a listing of the available documentation releases:</p>
+      <p>Below is a listing of the available documentation:</p>
 
       <div class="releases">
         <?php foreach (scanForReleases('./release') as $folder): ?>
           <a class="release" href="release/<?=$folder?>/"><?=$folder?></a>
+        <?php endforeach; ?>
+      </div>
+
+      <hr>
+
+      <div class="archive releases">
+        <p class="title">For archival purposes, older unsupported versions are listed here:</p>
+
+        <?php foreach (array_reverse(['0.8.0', '0.8.1', '1.0.0', '1.1.0', '1.2.0']) as $release): ?>
+          <a class="release" href="http://v1.footworkjs.com/docs/<?=$release?>/viewModel">v<?=$release?></a>
         <?php endforeach; ?>
       </div>
     </main>

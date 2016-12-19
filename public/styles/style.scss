@@ -49,17 +49,19 @@ button {
 
 .releases {
   @include clearblock;
+  padding-bottom: 10px;
 }
 
 .release {
   padding: 10px;
-  background: blue;
+  background: #1384ee;
   color: white;
   float: left;
   clear: both;
   border-radius: 3px;
   width: 300px;
-  opacity: 0.6;
+  max-width: 100%;
+  opacity: 0.7;
 
   &:hover {
     opacity: 1;
@@ -68,17 +70,40 @@ button {
   }
 }
 
+.archive.releases {
+  font-size: 13px;
+
+  .title {
+    font-weight: bold;
+  }
+
+  .release {
+    line-height: 15px;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
 .release + .release {
   margin-top: 10px;
 }
 
 main {
-  padding: 20px 0;
+  padding-top: 20px;
+  margin: 0 auto;
 }
 
 nav {
   display: block;
   color: #888;
+  border-radius: 0 !important;
+
+  & > .container {
+    padding: 0;
+  }
 
   ul, img, .navbar-text {
     float: left;
