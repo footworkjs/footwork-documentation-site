@@ -48,7 +48,7 @@ button {
 }
 
 .releases {
-  padding: 10px;
+  @include clearblock;
 }
 
 .release {
@@ -70,4 +70,35 @@ button {
 
 .release + .release {
   margin-top: 10px;
+}
+
+main {
+  padding: 20px 0;
+}
+
+nav {
+  display: block;
+  color: #888;
+
+  ul, img, .navbar-text {
+    float: left;
+    line-height: 68px;
+  }
+
+  .nav-link {
+    padding: 0 !important;
+  }
+
+  .saying {
+    margin-left: 20px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  nav .saying {
+    margin: 0;
+    padding: 0;
+    line-height: 25px;
+    clear: both;
+  }
 }
