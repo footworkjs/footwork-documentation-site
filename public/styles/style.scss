@@ -93,17 +93,12 @@ button {
 
 main {
   padding-top: 20px;
-  margin: 0 auto;
 }
 
 nav {
   display: block;
   color: #888;
   border-radius: 0 !important;
-
-  & > .container {
-    padding: 0;
-  }
 
   ul, img, .navbar-text {
     float: left;
@@ -120,6 +115,11 @@ nav {
 }
 
 @include media-breakpoint-down(sm) {
+  nav.navbar {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   nav .saying {
     margin: 0;
     padding: 0;
