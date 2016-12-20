@@ -8,6 +8,7 @@ function scanForReleases($releaseFolder) {
 <html>
   <head>
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="shortcut icon" href="/images/favicon.png">
   </head>
 
   <body>
