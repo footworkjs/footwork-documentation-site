@@ -1,5 +1,4 @@
-$codeBackground: #eee;
-$menuActiveColor: #000;
+$mainColor: #1384ee;
 
 @import '../bower_components/bootstrap/scss/bootstrap.scss';
 
@@ -96,6 +95,15 @@ button {
   margin-top: 10px;
 }
 
+header {
+  background: $mainColor;
+  color: white;
+
+  .title {
+    margin: 0 20px;
+  }
+}
+
 main {
   padding-top: 20px;
 }
@@ -106,14 +114,11 @@ body {
 
 nav {
   display: block;
-  color: #888;
-  background: white;
   border-radius: 0 !important;
-  text-align: center;
   box-shadow: 0px 1px 26px -8px black;
 
   img {
-    height: 50px;
+    height: 40px;
     max-width: 100%;
   }
 
@@ -124,6 +129,13 @@ nav {
 }
 
 @include media-breakpoint-down(sm) {
+  header .title {
+    margin: 0;
+    padding-top: 10px;
+    display: block;
+    clear: both;
+  }
+
   nav.navbar {
     padding-left: 0;
     padding-right: 0;

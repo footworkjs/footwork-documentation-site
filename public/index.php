@@ -11,17 +11,24 @@ function scanForReleases($releaseFolder) {
   <head>
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="shortcut icon" href="/images/favicon.png?v=3">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
   </head>
 
   <body>
-    <nav class="navbar">
-      <div class="container">
-        <a class="navbar-brand" href="http://footworkjs.com"><img src="/images/footwork.svg" /></a>
-      </div>
-    </nav>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <a class="navbar-brand" href="http://footworkjs.com"><img src="/images/footwork-white.svg" /></a>
+          <span class="navbar-text title">Documentation</span>
+        </div>
+      </nav>
+    </header>
 
     <main class="container">
-      <p>Below is a listing of the available documentation:</p>
+      <p><em>Below is a listing of the available documentation for <a href="http://footworkjs.com">Footwork</a>.</em></p>
+      <p>Footwork is a frontend javascript framework based on <a href="http://knockoutjs.com/">KnockoutJS</a> that aims to be fully featured, expressive, and easy to use while remaining as idiomatic and compatible with Knockout and its existing code base as possible.</p>
 
       <div class="releases">
         <?php foreach (scanForReleases('./release') as $index => $folder): ?>
