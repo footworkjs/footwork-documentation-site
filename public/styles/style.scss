@@ -95,9 +95,17 @@ button {
   margin-top: 10px;
 }
 
+$headerHeight: 60px;
 header {
   background: $mainColor;
   color: white;
+  display: block;
+  height: $headerHeight;
+  line-height: $headerHeight;
+
+  .home, .title {
+    float: left;
+  }
 
   .title {
     margin: 0 20px;
@@ -110,15 +118,21 @@ main {
 
 body {
   background: #f5f5f5;
+  font-size: 15px;
 }
 
 nav {
   display: block;
   border-radius: 0 !important;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  height: 100%;
 
+  $logoPadding: 10px;
+  $logoHeight: 40px; // $headerHeight - ($logoPadding * 2);
   img {
-    height: 40px;
+    height: $logoHeight;
+    position: relative;
+    top: ($headerHeight / 2) - ($logoHeight / 2);
     max-width: 100%;
   }
 

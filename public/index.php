@@ -18,17 +18,17 @@ function scanForReleases($releaseFolder) {
 
   <body>
     <header>
-      <nav class="navbar">
+      <nav>
         <div class="container">
-          <a class="navbar-brand" href="http://footworkjs.com"><img src="/images/footwork-white.svg" /></a>
-          <span class="navbar-text title">Documentation</span>
+          <a class="home navbar-brand" href="http://footworkjs.com"><img src="/images/footwork-white.svg" /></a>
+          <div class="title">Documentation</div>
         </div>
       </nav>
     </header>
 
     <main class="container">
       <p><em>Below is a listing of the available documentation for <a href="http://footworkjs.com">Footwork</a>.</em></p>
-      <p>Footwork is a frontend javascript framework based on <a href="http://knockoutjs.com/">KnockoutJS</a> that aims to be fully featured, expressive, and easy to use while remaining as idiomatic and compatible with Knockout and its existing code base as possible.</p>
+      <p><a href="http://footworkjs.com">Footwork</a> is a frontend javascript framework based on <a href="http://knockoutjs.com/">KnockoutJS</a> that aims to be fully featured, expressive, and easy to use while remaining as idiomatic and compatible with Knockout and its existing code base as possible.</p>
 
       <div class="releases">
         <?php foreach (scanForReleases('./release') as $index => $folder): ?>
