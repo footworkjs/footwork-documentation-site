@@ -143,12 +143,15 @@ nav {
 }
 
 @include media-breakpoint-down(sm) {
-  header .title {
-    margin: 0;
-    padding-top: 10px;
-    display: block;
-    clear: both;
+  header {
     height: 120px;
+
+    .title {
+      margin: 0;
+      padding-top: 10px;
+      display: block;
+      clear: both;
+    }
   }
 
   nav.navbar {
