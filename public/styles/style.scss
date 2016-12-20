@@ -100,11 +100,17 @@ main {
   padding-top: 20px;
 }
 
+body {
+  background: #f5f5f5;
+}
+
 nav {
   display: block;
   color: #888;
+  background: white;
   border-radius: 0 !important;
   text-align: center;
+  box-shadow: 0px 1px 26px -8px black;
 }
 
 @include media-breakpoint-down(sm) {
