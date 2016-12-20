@@ -1,8 +1,10 @@
 <?php
 function scanForReleases($releaseFolder) {
-  return array_filter(scandir($releaseFolder), function ($fileName) use ($releaseFolder) {
+  $releases = array_filter(scandir($releaseFolder), function ($fileName) use ($releaseFolder) {
     return is_dir("{$releaseFolder}/{$fileName}") && !in_array($fileName, ['.', '..']);
   });
+  usort($releases, 'version_compare');
+  return array_reverse($releases);
 }
 ?>
 <html>
@@ -22,8 +24,8 @@ function scanForReleases($releaseFolder) {
       <p>Below is a listing of the available documentation:</p>
 
       <div class="releases">
-        <?php foreach (scanForReleases('./release') as $folder): ?>
-          <a class="release" href="release/<?=$folder?>/"><?=$folder?></a>
+        <?php foreach (scanForReleases('./release') as $index => $folder): ?>
+          <a class="release" href="release/<?=$folder?>/">v<?=$folder?><?=($index === 0 ? '<span>latest</span>' : '')?></a>
         <?php endforeach; ?>
       </div>
 
