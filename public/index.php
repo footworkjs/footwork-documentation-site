@@ -9,6 +9,7 @@ function scanForReleases($releaseFolder) {
 ?>
 <html>
   <head>
+    <title>Footwork Documentation</title>
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="shortcut icon" href="/images/favicon.png?v=3">
 
