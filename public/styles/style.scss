@@ -99,19 +99,7 @@ nav {
   display: block;
   color: #888;
   border-radius: 0 !important;
-
-  ul, img, .navbar-text {
-    float: left;
-    line-height: 68px;
-  }
-
-  .nav-link {
-    padding: 0 !important;
-  }
-
-  .saying {
-    margin-left: 20px;
-  }
+  text-align: center;
 }
 
 @include media-breakpoint-down(sm) {

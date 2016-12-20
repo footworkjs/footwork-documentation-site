@@ -11,10 +11,9 @@ function scanForReleases($releaseFolder) {
   </head>
 
   <body>
-    <nav class="navbar navbar-dark bg-inverse">
+    <nav class="navbar">
       <div class="container">
         <a class="navbar-brand" href="http://footworkjs.com"><img src="/images/footwork-logo.png" /></a>
-        <span class="navbar-text saying">Documentation</span>
       </div>
     </nav>
 
