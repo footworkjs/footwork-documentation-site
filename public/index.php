@@ -1,7 +1,7 @@
 <?php
 function scanForReleases($releaseFolder) {
   $releases = array_filter(scandir($releaseFolder), function ($fileName) use ($releaseFolder) {
-    return is_dir("{$releaseFolder}/{$fileName}") && !in_array($fileName, ['.', '..']);
+    return is_link("{$releaseFolder}/{$fileName}") && !in_array($fileName, ['.', '..']);
   });
   usort($releases, 'version_compare');
   return array_reverse($releases);
@@ -35,7 +35,10 @@ function scanForReleases($releaseFolder) {
         <?php foreach (scanForReleases('./release') as $index => $folder): ?>
           <div class="release">
             <a class="doc-link" href="release/<?=$folder?>/">v<?=$folder?><?=($index === 0 ? '<span>latest</span>' : '')?></a>
-            <a class="download-link" href="release/footwork-docs-<?=$folder?>.tar.gz">footwork-docs-<?=$folder?>.tar.gz</a>
+            <div class="download-links">
+              <a class="download-link" href="release/footwork-docs-<?=$folder?>.zip">footwork-docs-<?=$folder?>.zip</a>
+              <a class="download-link" href="release/footwork-docs-<?=$folder?>.tar.gz">footwork-docs-<?=$folder?>.tar.gz</a>
+            </div>
           </div>
         <?php endforeach; ?>
       </div>

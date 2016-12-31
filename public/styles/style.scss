@@ -62,6 +62,12 @@ button {
   @include clearblock;
   line-height: 40px;
 
+  .download-links {
+    float: left;
+    white-space: nowrap;
+    margin-left: 10px;
+  }
+
   .doc-link {
     padding: 0 10px;
     background: #1384ee;
