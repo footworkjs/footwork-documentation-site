@@ -60,12 +60,45 @@ button {
 
 .release {
   @include clearblock;
-  line-height: 40px;
+  $releaseHeight: 40px;
+  line-height: $releaseHeight;
 
   .download-links {
     float: left;
-    white-space: nowrap;
-    margin-left: 10px;
+    margin-right: 10px;
+
+    a {
+      $background: white;
+
+      white-space: nowrap;
+      padding: 0 10px;
+      background: $background;
+      border-radius: 3px;
+      border: 1px solid darken($background, 10%);
+      @include clearblock;
+      float: left;
+      margin-right: 5px;
+      margin-bottom: 10px;
+
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+
+      &:hover {
+        border-color: darken($background, 30%);
+      }
+
+      &:active {
+        box-shadow: 0 1px 3px -1px black inset;
+      }
+
+      .icon {
+        margin-right: 5px;
+        font-size: 20px;
+        float: left;
+        line-height: $releaseHeight;
+      }
+    }
   }
 
   .doc-link {
@@ -78,6 +111,8 @@ button {
     width: 300px;
     max-width: 100%;
     opacity: 0.7;
+    margin-right: 10px;
+    margin-bottom: 10px;
 
     span {
       float: right;
@@ -89,10 +124,6 @@ button {
       color: white;
       text-decoration: none;
     }
-  }
-
-  a + a {
-    margin-left: 10px;
   }
 }
 
@@ -113,10 +144,6 @@ button {
       }
     }
   }
-}
-
-.release + .release {
-  margin-top: 10px;
 }
 
 $headerHeight: 60px;

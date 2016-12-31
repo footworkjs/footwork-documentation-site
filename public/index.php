@@ -12,6 +12,7 @@ function scanForReleases($releaseFolder) {
     <title>Footwork Documentation</title>
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="shortcut icon" href="/images/favicon.png?v=3">
+    <link rel="stylesheet" href="styles/fonts/fonts.css">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
@@ -36,8 +37,8 @@ function scanForReleases($releaseFolder) {
           <div class="release">
             <a class="doc-link" href="release/<?=$folder?>/">v<?=$folder?><?=($index === 0 ? '<span>latest</span>' : '')?></a>
             <div class="download-links">
-              <a class="download-link" href="release/footwork-docs-<?=$folder?>.zip">footwork-docs-<?=$folder?>.zip</a>
-              <a class="download-link" href="release/footwork-docs-<?=$folder?>.tar.gz">footwork-docs-<?=$folder?>.tar.gz</a>
+              <a class="download-link" href="release/footwork-docs-<?=$folder?>.zip"><span class="icon icon-document-file-zip"></span>footwork-docs-<?=$folder?>.zip</a>
+              <a class="download-link" href="release/footwork-docs-<?=$folder?>.tar.gz"><span class="icon icon-document-file-tgz"></span>footwork-docs-<?=$folder?>.tar.gz</a>
             </div>
           </div>
         <?php endforeach; ?>
