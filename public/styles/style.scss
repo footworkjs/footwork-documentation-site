@@ -59,25 +59,34 @@ button {
 }
 
 .release {
-  padding: 10px;
-  background: #1384ee;
-  color: white;
-  float: left;
-  clear: both;
-  border-radius: 3px;
-  width: 300px;
-  max-width: 100%;
-  opacity: 0.7;
+  @include clearblock;
+  line-height: 40px;
 
-  span {
-    float: right;
+  .doc-link {
+    padding: 0 10px;
+    background: #1384ee;
+    color: white;
+    float: left;
+    clear: both;
+    border-radius: 3px;
+    width: 300px;
+    max-width: 100%;
     opacity: 0.7;
+
+    span {
+      float: right;
+      opacity: 0.7;
+    }
+
+    &:hover {
+      opacity: 1;
+      color: white;
+      text-decoration: none;
+    }
   }
 
-  &:hover {
-    opacity: 1;
-    color: white;
-    text-decoration: none;
+  a + a {
+    margin-left: 10px;
   }
 }
 
@@ -89,11 +98,13 @@ button {
   }
 
   .release {
-    line-height: 15px;
-    opacity: 0.6;
+    .doc-link {
+      line-height: 30px;
+      opacity: 0.6;
 
-    &:hover {
-      opacity: 1;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }

@@ -33,7 +33,10 @@ function scanForReleases($releaseFolder) {
 
       <div class="releases">
         <?php foreach (scanForReleases('./release') as $index => $folder): ?>
-          <a class="release" href="release/<?=$folder?>/">v<?=$folder?><?=($index === 0 ? '<span>latest</span>' : '')?></a>
+          <div class="release">
+            <a class="doc-link" href="release/<?=$folder?>/">v<?=$folder?><?=($index === 0 ? '<span>latest</span>' : '')?></a>
+            <a class="download-link" href="release/footwork-docs-<?=$folder?>.tar.gz">footwork-docs-<?=$folder?>.tar.gz</a>
+          </div>
         <?php endforeach; ?>
       </div>
 
@@ -43,7 +46,9 @@ function scanForReleases($releaseFolder) {
         <p class="title">For archival purposes, older versions are listed here (these use the older style documentation):</p>
 
         <?php foreach (array_reverse(['0.8.0', '0.8.1', '1.0.0', '1.1.0', '1.2.0']) as $release): ?>
-          <a class="release" href="http://v1.footworkjs.com/docs/<?=$release?>/viewModel">v<?=$release?></a>
+          <div class="release">
+            <a class="doc-link" href="http://v1.footworkjs.com/docs/<?=$release?>/viewModel">v<?=$release?></a>
+          </div>
         <?php endforeach; ?>
       </div>
     </main>
