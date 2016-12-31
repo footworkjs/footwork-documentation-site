@@ -37,8 +37,8 @@ function scanForReleases($releaseFolder) {
           <div class="release">
             <a class="doc-link" href="release/<?=$folder?>/">v<?=$folder?><?=($index === 0 ? '<span>latest</span>' : '')?></a>
             <div class="download-links">
-              <a class="download-link" href="release/footwork-docs-<?=$folder?>.zip"><span class="icon icon-document-file-zip"></span>footwork-docs-<?=$folder?>.zip</a>
-              <a class="download-link" href="release/footwork-docs-<?=$folder?>.tar.gz"><span class="icon icon-document-file-tgz"></span>footwork-docs-<?=$folder?>.tar.gz</a>
+              <a class="download-link" href="release/footwork-docs-<?=$folder?>.zip"><span class="link-content"><span class="icon icon-document-file-zip"></span>footwork-docs-<?=$folder?><em>.zip</em></span></a>
+              <a class="download-link" href="release/footwork-docs-<?=$folder?>.tar.gz"><span class="link-content"><span class="icon icon-document-file-tgz"></span>footwork-docs-<?=$folder?><em>.tar.gz</em></span></a>
             </div>
           </div>
         <?php endforeach; ?>

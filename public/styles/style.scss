@@ -71,6 +71,7 @@ button {
       $background: white;
 
       white-space: nowrap;
+      line-height: $releaseHeight - 2px;
       padding: 0 10px;
       background: $background;
       border-radius: 3px;
@@ -79,6 +80,16 @@ button {
       float: left;
       margin-right: 5px;
       margin-bottom: 10px;
+      font-size: 13px;
+
+      em {
+        font-style: normal;
+        font-weight: bold;
+      }
+
+      .link-content, .icon {
+        opacity: 0.7;
+      }
 
       &:hover, &:focus {
         text-decoration: none;
@@ -86,6 +97,10 @@ button {
 
       &:hover {
         border-color: darken($background, 30%);
+
+        .link-content, .icon {
+          opacity: 1;
+        }
       }
 
       &:active {
@@ -96,7 +111,7 @@ button {
         margin-right: 5px;
         font-size: 20px;
         float: left;
-        line-height: $releaseHeight;
+        line-height: $releaseHeight - 2px;
       }
     }
   }
