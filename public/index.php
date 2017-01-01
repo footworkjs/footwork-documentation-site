@@ -29,8 +29,8 @@ function scanForReleases($releaseFolder) {
     </header>
 
     <main class="container">
-      <p><em>Below is a listing of the available documentation for <a href="http://footworkjs.com">Footwork</a>.</em></p>
       <p><a href="http://footworkjs.com">Footwork</a> is a frontend javascript framework based on <a href="http://knockoutjs.com/">KnockoutJS</a> that aims to be fully featured, expressive, and easy to use while remaining as idiomatic and compatible with Knockout and its existing code base as possible.</p>
+      <p><em>Below is a listing of the available documentation for <a href="http://footworkjs.com">Footwork</a>.</em></p>
 
       <div class="releases">
         <?php foreach (scanForReleases('./release') as $index => $folder): ?>
