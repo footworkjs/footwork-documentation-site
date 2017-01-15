@@ -76,6 +76,8 @@ button {
     a {
       $background: white;
 
+      overflow: hidden;
+      text-overflow: ellipsis;
       white-space: nowrap;
       line-height: $releaseHeight - 2px;
       padding: 0 10px;
