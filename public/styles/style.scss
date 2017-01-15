@@ -54,19 +54,25 @@ button {
 }
 
 .releases {
-  @include clearblock;
   padding-bottom: 10px;
+  thead {
+    td {
+      text-align: left;
+      padding: 10px;
+      font-weight: bold;
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+  }
 }
 
 .release {
-  @include clearblock;
   $releaseHeight: 40px;
   line-height: $releaseHeight;
 
   .download-links {
-    float: left;
-    margin-right: 10px;
-
     a {
       $background: white;
 

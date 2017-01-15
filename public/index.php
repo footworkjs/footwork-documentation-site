@@ -32,17 +32,25 @@ function scanForReleases($releaseFolder) {
       <p><a href="http://footworkjs.com">Footwork</a> is a frontend javascript framework based on <a href="http://knockoutjs.com/">KnockoutJS</a> that aims to be fully featured, expressive, and easy to use while remaining as idiomatic and compatible with Knockout and its existing code base as possible.</p>
       <p><em>Below is a listing of the available documentation for <a href="http://footworkjs.com">Footwork</a>.</em></p>
 
-      <div class="releases">
+      <table class="releases">
+        <thead>
+          <tr>
+            <td>Documentation</td>
+            <td>Downloads</td>
+          </tr>
+        </thead>
         <?php foreach (scanForReleases('./release') as $index => $folder): ?>
-          <div class="release">
-            <a class="doc-link" href="release/<?=$folder?>/">v<?=$folder?><?=($index === 0 ? '<span>latest</span>' : '')?></a>
-            <div class="download-links">
+          <tr class="release">
+            <td>
+              <a class="doc-link" href="release/<?=$folder?>/">v<?=$folder?><?=($index === 0 ? '<span>latest</span>' : '')?></a>
+            </td>
+            <td class="download-links">
               <a class="download-link" href="release/footwork-docs-<?=$folder?>.zip"><span class="link-content"><span class="icon icon-document-file-zip"></span>footwork-docs-<?=$folder?><em>.zip</em></span></a>
               <a class="download-link" href="release/footwork-docs-<?=$folder?>.tar.gz"><span class="link-content"><span class="icon icon-document-file-tgz"></span>footwork-docs-<?=$folder?><em>.tar.gz</em></span></a>
-            </div>
-          </div>
+            </td>
+          </tr>
         <?php endforeach; ?>
-      </div>
+      </table>
 
       <hr>
 
