@@ -33,7 +33,12 @@ require("../scan.php");
             <td>Downloads</td>
           </tr>
         </thead>
-        <?php foreach (scanForReleases('./release') as $index => $folder): ?>
+        <tr class="release">
+          <td>
+            <a class="doc-link" href="release/latest/">latest</a>
+          </td>
+        </tr>
+        <?php foreach (scanForReleases('./release', ['latest']) as $index => $folder): ?>
           <tr class="release">
             <td>
               <a class="doc-link" href="release/<?=$folder?>/">v<?=$folder?><?=($index === 0 ? '<span>latest</span>' : '')?></a>
