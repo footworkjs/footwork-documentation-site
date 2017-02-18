@@ -2,3 +2,4 @@
 /public/bower_components
 /public/styles/*.css
 /public/release
+/debug.log

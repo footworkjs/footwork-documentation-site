@@ -1,4 +1,4 @@
-$mainColor: #1384ee;
+$mainColor: #e15545;
 
 $container-max-widths: (
   sm: 540px,
@@ -35,7 +35,7 @@ $noteBackground: white;
 $refBlockMargin: 24px;
 $tagColor: black;
 
-$buttonColor: #e6832b;
+$buttonColor: $mainColor;
 button {
   background: $buttonColor;
   color: text-color($buttonColor);
@@ -89,6 +89,7 @@ button {
       margin-right: 5px;
       margin-bottom: 10px;
       font-size: 13px;
+      color: darken($buttonColor, 10%);
 
       em {
         font-style: normal;
@@ -126,7 +127,7 @@ button {
 
   .doc-link {
     padding: 0 10px;
-    background: #1384ee;
+    background: $buttonColor;
     color: white;
     float: left;
     clear: both;
